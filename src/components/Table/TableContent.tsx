@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TableColumns } from './TableColumns';
 import ListingTable from './ListingTable';
-import { TableData, TableRowData } from '../../interfaces/table';
+import {  TableRowData } from '../../interfaces/table';
 import { getTableData } from '../../services/data.service';
 import * as T from '../../styles/table.style';
 

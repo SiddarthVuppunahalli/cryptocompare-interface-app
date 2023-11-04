@@ -13,7 +13,7 @@ export const CardWrap = styled.div`
 
 export const CardBox = styled.div`
 	display: flex;
-	width: 50%;
+	width: 30%;
 	height: 90%;
 	align-items: center;
 	font-size: 1.3rem;
@@ -36,7 +36,7 @@ export const CardNotFoundBox = styled.div`
 `;
 
 export const CardColor = styled.div<DivProps>`
-	width: 10px;
+	width: 20px;
 	height: 100%;
 	background-color: ${(props) => props.bgColor};
 	border-radius: 5px 0px 0px 5px;
@@ -56,7 +56,7 @@ export const CardContent = styled.div`
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: center;
 	padding: 40px;
 `;
 
@@ -70,4 +70,10 @@ export const CardsWrapper = styled.div`
 	gap: 30px;
 	margin-top: 30px;
 	margin-bottom: 30px;
+`;
+
+export const ArrowIcon = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 `;

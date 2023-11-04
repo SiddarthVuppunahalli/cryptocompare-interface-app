@@ -6,6 +6,7 @@ import TableContent from './components/Table/TableContent';
 function App() {
   return (
     <div>
+      <A.Header>CryptoCompare Interface Application</A.Header>
       <A.ContentWrap>
         <h2>Bookmarked Cryptocurrencies</h2>
         <BookmarksBar />
@@ -14,6 +15,7 @@ function App() {
           <TableContent />
         </A.TableWrap>
       </A.ContentWrap>
+      <A.Footer>By Siddarth Vuppunahalli</A.Footer>
     </div>
   );
 }

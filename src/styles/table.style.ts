@@ -8,7 +8,7 @@ export const TableWrap = styled.div`
 	min-height: 440px;
 	box-sizing: border-box;
 	background: #ffffff;
-	width: 80%;
+	width: 90%;
 `;
 
 export const TableHeaderCell = styled.div`
