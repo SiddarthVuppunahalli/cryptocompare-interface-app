@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
+import * as A from './styles/app.style'
 import BookmarksBar from './components/Bookmarks/BookmarksBar';
 import TableContent from './components/Table/TableContent';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BookmarksBar />
-      <TableContent />
+      <A.TableWrap>
+        <TableContent />
+      </A.TableWrap>
     </div>
   );
 }

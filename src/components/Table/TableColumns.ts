@@ -1,11 +1,10 @@
-export const tableColumns = [
-    { header: 'Name', width: '20%' },
-    { header: 'Symbol', width: '20%' },
-    { header: 'Price', width: '20%' },
-    { header: 'Last Update', width: '12%' },
-    { header: 'Direct Vol', width: '12%' },
-    { header: 'Total Vol', width: '12%' },
-    { header: 'Top Tier Vol', width: '12%' },
-    { header: 'Market Cap', width: '12%' },
+export const TableColumns = [
+    { header: 'Symbol', width: '12', key: 'FROMSYMBOL' },
+    { header: 'Price', width: '12', key: 'PRICE' },
+    { header: 'Last Update', width: '12', key: 'LASTUPDATE' },
+    { header: 'Direct Vol', width: '12', key: 'TOPTIERVOLUME24HOURTO' },
+    { header: 'Total Vol', width: '12', key: 'TOTALVOLUME24HTO' },
+    { header: 'Top Tier Vol', width: '12', key: 'TOPTIERVOLUME24HOURTO' },
+    { header: 'Market Cap', width: '12', key: 'MKTCAP' },
   ];
   

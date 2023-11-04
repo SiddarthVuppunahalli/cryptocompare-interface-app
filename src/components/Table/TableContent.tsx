@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { tableColumns } from './TableColumns';
+import { TableColumns } from './TableColumns';
 import ListingTable from './ListingTable';
 import { TableData, TableRowData } from '../../interfaces/table';
 import { getTableData } from '../../services/data.service';
+import * as T from '../../styles/table.style';
 
 function TableContent() {
   const [tableData, setTableData] = useState<TableRowData[]>([]);
@@ -31,20 +32,18 @@ function TableContent() {
   }, []);
 
   return (
-    <div className="table-content" >
-      <table className="crypto-table">
-        <thead>
-          <tr>
-            {tableColumns.map((column, index) => (
-              <th key={index} style={{ width: column.width }}>
+    <React.Fragment >
+      <T.TableWrap>
+        <T.HeaderCell>
+            {TableColumns.map((column, index) => (
+              <T.TableCell key={index} style={{ width: column.width }}>
                 {column.header}
-              </th>
+              </T.TableCell>
             ))}
-          </tr>
-        </thead>
+        </T.HeaderCell>
         <ListingTable data={tableData} />
-      </table>
-    </div>
+      </T.TableWrap>
+    </React.Fragment>
   );
 };
 
