@@ -5,6 +5,7 @@ import { RootState } from '../../redux/store';
 import BookmarkCard from './BookmarkCard';
 import { getCardData } from '../../services/data.service';
 import { CardData } from '../../interfaces/card';
+import { CardNotFoundBox, CardsWrapper } from '../../styles/card.style';
 
 function BookmarksBar() {
   const bookmarks = useSelector((state: RootState) => state.bookmarks);
@@ -33,12 +34,17 @@ function BookmarksBar() {
 
   return (
     <div className="bookmarks-bar">
-      <h2>Bookmarked Cryptocurrencies</h2>
-      <div className="bookmarks-container">
-        {bookmarks.map((id: string) => (
-          <BookmarkCard key={id} id={id} data={'yes'}/>
-        ))}
-      </div>
+      <CardsWrapper>
+
+        {bookmarks.length === 0 ? (
+          <CardNotFoundBox>No Bookmarks added yet.</CardNotFoundBox>
+        ) : (
+          bookmarks.map((symbol: string) => (
+            <BookmarkCard key={symbol} id={symbol} data={cardData} />
+          ))
+        )}
+
+      </CardsWrapper>
     </div>
   );
 };

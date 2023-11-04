@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
 import DetailsModal from '../Modal/DetailsModal';
+import { getNameFromSymbol } from '../../utils/table';
 
 function ListingTable({data}: {data: TableRowData[]}) {
   const bookmarks = useSelector((state: RootState) => state.bookmarks);
@@ -42,7 +43,7 @@ function ListingTable({data}: {data: TableRowData[]}) {
         data.map((currencyData) => (
           <T.TableRow key={currencyData.USD.FROMSYMBOL}>
             <div onClick={() => handleSymbolClick(currencyData.USD)} style={{ minWidth: '10%' }}>
-              <T.TableCell key='0' style={{ width: 12 }}>
+              <T.TableCell key='0' style={{ width: 30 }}>
                   <T.Clickable>{currencyData.USD.FROMSYMBOL}</T.Clickable>
               </T.TableCell>
             </div>
@@ -52,8 +53,8 @@ function ListingTable({data}: {data: TableRowData[]}) {
               </T.TableCell>
             ))}
             <T.TableCell key="bookmark" style={{ width: '6' }}>
-              <div onClick={() => toggleBookmark(currencyData.USD.FROMSYMBOL)}>
-                {bookmarks.includes(currencyData.USD.FROMSYMBOL) ? (
+              <div onClick={() => toggleBookmark(getNameFromSymbol(currencyData.USD.FROMSYMBOL))}>
+                {bookmarks.includes(getNameFromSymbol(currencyData.USD.FROMSYMBOL)) ? (
                   <FaBookmark size={24} color="blue" />
                 ) : (
                   <FaRegBookmark size={24} color="gray" />

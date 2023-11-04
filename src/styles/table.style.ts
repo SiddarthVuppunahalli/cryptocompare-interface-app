@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 interface DivProps {
     widthSize?: number,
-
 };
 
 export const TableWrap = styled.div`

@@ -6,10 +6,14 @@ import TableContent from './components/Table/TableContent';
 function App() {
   return (
     <div>
-      <BookmarksBar />
-      <A.TableWrap>
-        <TableContent />
-      </A.TableWrap>
+      <A.ContentWrap>
+        <h2>Bookmarked Cryptocurrencies</h2>
+        <BookmarksBar />
+        <h2>Cryptocurrency Listings</h2>
+        <A.TableWrap>
+          <TableContent />
+        </A.TableWrap>
+      </A.ContentWrap>
     </div>
   );
 }
