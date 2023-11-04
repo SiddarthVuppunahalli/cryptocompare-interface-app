@@ -12,7 +12,7 @@ function BookmarksBar() {
 
   const fetchData = async () => {
     try {
-      const data = await getCardData();
+      const data = await getCardData(bookmarks);
       setCardData(data);
     } catch (error) {
       console.error(error);
@@ -29,7 +29,7 @@ function BookmarksBar() {
     return () => {
       clearInterval(refreshInterval);
     };
-  }, []);
+  }, [bookmarks]);
 
   return (
     <div className="bookmarks-bar">

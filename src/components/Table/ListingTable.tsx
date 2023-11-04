@@ -47,7 +47,7 @@ function ListingTable({data}: {data: TableRowData[]}) {
               </T.TableCell>
             </div>
             {TableColumns.slice(1).map((column, index) => (
-              <T.TableCell key={index} style={{ width: column.width }}>
+              <T.TableCell key={index}>
                 {currencyData.USD[column.key as keyof typeof currencyData.USD]}
               </T.TableCell>
             ))}

@@ -12,9 +12,29 @@ export const TableWrap = styled.div`
 	width: 80%;
 `;
 
-export const TableCell = styled.div<DivProps>`
-	width: ${(props) => props.widthSize}em;
-    min-width: 10%;
+export const TableHeaderCell = styled.div`
+    width: 9.5%;
+	height: 100%;
+	display: flex;
+	padding: 2px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	word-break: keep-all;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	justify-content: left;
+	align-items: center;
+	text-align: left;
+	padding-left: 20px;
+	color: black;
+	div {
+		flex: 1;
+	}
+`;
+
+export const TableCell = styled.div`
+    width: 10%;
 	height: 100%;
 	display: flex;
 	padding: 2px 10px;

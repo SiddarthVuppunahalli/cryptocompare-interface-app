@@ -36,9 +36,9 @@ function TableContent() {
       <T.TableWrap>
         <T.HeaderCell>
             {TableColumns.map((column, index) => (
-              <T.TableCell key={index} style={{ width: column.width }}>
+              <T.TableHeaderCell key={index}>
                 {column.header}
-              </T.TableCell>
+              </T.TableHeaderCell>
             ))}
         </T.HeaderCell>
         <ListingTable data={tableData} />
