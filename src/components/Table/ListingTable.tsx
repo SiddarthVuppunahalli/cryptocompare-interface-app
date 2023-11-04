@@ -1,16 +1,15 @@
 import React from 'react';
 import { tableColumns } from './TableColumns'; // Import the column definitions
-import { TableData } from '../../interfaces/table';
+import { TableData, TableRowData } from '../../interfaces/table';
 
 
-function ListingTable({data}: {data: TableData[]}) {
+function ListingTable({data}: {data: TableRowData[]}) {
   return (
     <tbody>
-      {data.map((item) => (
-        <tr key={item.symbol.currency.FROMSYMBOL}>
+      {data.map((currencyData) => (
+        <tr key={currencyData.USD.FROMSYMBOL}>
           {tableColumns.map((column, index) => (
             <td key={index} style={{ width: column.width }}>
-                {/* //here */}
             </td>
           ))}
         </tr>

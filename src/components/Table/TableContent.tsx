@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { tableColumns } from './TableColumns';
 import ListingTable from './ListingTable';
-import { TableData } from '../../interfaces/table';
+import { TableData, TableRowData } from '../../interfaces/table';
 import { getTableData } from '../../services/data.service';
 
 function TableContent() {
-  const [cryptoData, setCryptoData] = useState<TableData[]>([]);
-
+  const [tableData, setTableData] = useState<TableRowData[]>([]);
+ 
   const fetchData = async () => {
     try {
-      const data = await getTableData();
-      setCryptoData(data);
+      const response = await getTableData();
+      const displayData = response?.DISPLAY;
+      const dataArray: TableRowData[] = Object.values(displayData);
+      setTableData(dataArray);
     } catch (error) {
       console.error(error);
     }
@@ -29,7 +31,7 @@ function TableContent() {
   }, []);
 
   return (
-    <div className="table-content">
+    <div className="table-content" >
       <table className="crypto-table">
         <thead>
           <tr>
@@ -40,7 +42,7 @@ function TableContent() {
             ))}
           </tr>
         </thead>
-        <ListingTable data={cryptoData} />
+        <ListingTable data={tableData} />
       </table>
     </div>
   );

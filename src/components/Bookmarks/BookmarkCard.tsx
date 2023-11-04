@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeBookmark } from '../../redux/bookmarksSlice';
 
-function BookmarkCard ({id, key}: {id: string, key: string}){
+function BookmarkCard ({id, key, data}: {id: string, key: string, data: string}){
   const dispatch = useDispatch();
 
   const handleRemoveBookmark = () => {
