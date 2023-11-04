@@ -2,7 +2,7 @@
 React app that interfaces with CryptoCompare.com APIs
 
 # Steps to run the application
-1. Use the command: 'git clone <link from repository>' to clone the repository.
+1. Use the command: 'git clone "link from repository"' to clone the repository.
 2. Make sure npm is installed.
 3. Navigate to the project directory and use the command 'npm install' to install all dependencies.
 4. Use the command 'npm start' to start the application.
