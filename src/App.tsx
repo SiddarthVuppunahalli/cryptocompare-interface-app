@@ -8,6 +8,8 @@ function App() {
     <div>
       <A.Header>CryptoCompare Interface Application</A.Header>
       <A.ContentWrap>
+        <h2>Currency Picker</h2>
+        {/*  */}
         <h2>Bookmarked Cryptocurrencies</h2>
         <BookmarksBar />
         <h2>Cryptocurrency Listings</h2>
